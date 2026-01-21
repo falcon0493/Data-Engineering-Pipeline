@@ -10,16 +10,16 @@ The design intentionally separates raw data, processed data, and business logic,
 
 ## High-level flow:
 
-USGS Earthquake API
-    ↓
-Extract (API → JSON)
-    ↓
-Raw Data 
-    ↓
-Transform (JSON → Clean CSV)
-    ↓
+USGS Earthquake API\
+    ↓\
+Extract (API → JSON)\
+    ↓\
+Raw Data\
+    ↓\
+Transform (JSON → Clean CSV)\
+    ↓\
 Processed Data 
-    ↓
+    ↓\
 Load (CSV → SQL Server)
 
 
@@ -44,25 +44,25 @@ Load (CSV → SQL Server)
 
 # Project Structure
 
-airflow/
-├── dags/
-│   ├── earthquake_etl_pipeline_dag.py
-│   └── src/
-│       ├── __init__.py
-│       ├── config.py
-│       ├── data_extraction.py
-│       ├── data_transformation.py
-│       └── data_loading.py
-│
-├── data/
-│   ├── raw/
-│   │   └── api_response_YYYY-MM-DD_to_YYYY-MM-DD.json
-│   └── processed/
-│       └── api_response_YYYY-MM-DD_to_YYYY-MM-DD.csv
-│
-├── docker-compose.yml
-├── Dockerfile
-└── README.md
+airflow/\
+├── dags/\
+│   ├── earthquake_etl_pipeline_dag.py\
+│   └── src/\
+│       ├── __init__.py\
+│       ├── config.py\
+│       ├── data_extraction.py\
+│       ├── data_transformation.py\
+│       └── data_loading.py\
+│\
+├── data/\
+│   ├── raw/\
+│   │   └── api_response_YYYY-MM-DD_to_YYYY-MM-DD.json\
+│   └── processed/\
+│       └── api_response_YYYY-MM-DD_to_YYYY-MM-DD.csv\
+│\
+├── docker-compose.yml\
+├── Dockerfile\
+└── README.md\
 
 
 # ETL Pipeline Breakdown
@@ -112,15 +112,15 @@ airflow/
 
   * Airflow runs inside Docker as container
 
-  * Connection uses:
-    host: host.docker.internal
-    port: 1433
+  * Connection uses:\
+    host: host.docker.internal\
+    port: 1433\
     authentication: SQL Server Authentication
 
 
 # Author
 
-Luthando Mthembu
+Luthando Mthembu\
 Data Engineering / Analytics
 
 # License
