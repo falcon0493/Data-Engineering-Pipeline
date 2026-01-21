@@ -86,7 +86,7 @@ with DAG(
 
     dag_id="earthquake_etl_pipeline_dag",
     description="ETL pipeline for earthquake data",
-    schedule="@once",                       
+    schedule="@daily",                       
     start_date=timezone.datetime(2025, 12, 4),
     catchup=False,
     default_args=default_args,
